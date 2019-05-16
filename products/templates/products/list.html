@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Product list
+{% endblock %}
+
+{% block content %}
+<ul class="list-group">
+{% for obj in object_list %}
+<li class="list-group-item">{{ obj.title }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block content %}
+<ul class="list-group">
+<li class="list-group-item">
+    {% if object.image %}
+    <img width="300" src="{{ object.image.url }}" alt="{{ object.title }}" class="img-fluid"><br>
+    {% endif %}
+    {{ object.title }} <br>
+    <small>{{ object.description }}</small>
+</li>
+</ul>
+{% endblock %}
